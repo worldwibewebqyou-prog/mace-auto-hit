@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "maceautohit",
+	"version": "${version}",
+	"name": "Mace Auto Hit",
+	"description": "Toggleable auto-attack with the Mace while falling, for singleplayer testing.",
+	"authors": ["you"],
+	"contact": {},
+	"license": "MIT",
+	"icon": "",
+	"environment": "client",
+	"entrypoints": {
+		"main": ["com.macemod.autohit.MaceAutoHitMod"],
+		"client": ["com.macemod.autohit.MaceAutoHitClient"]
+	},
+	"mixins": [],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
