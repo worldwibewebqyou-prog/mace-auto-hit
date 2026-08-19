@@ -17,14 +17,15 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.10
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: gradle build
 
       - name: Upload built jar
         uses: actions/upload-artifact@v4
         with:
-          name: mace-auto-hit-jar
-          path: build/libs/*.jar
+          name: mace-auto-hit-
